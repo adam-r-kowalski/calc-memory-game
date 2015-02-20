@@ -1,0 +1,26 @@
+{
+  "name": "calc-memory-game",
+  "version": "0.0.1",
+  "description": "Game to help you remember equations",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adam-r-kowalski/calc-memory-game.git"
+  },
+  "author": "Adam Kowalski <adam.kowalski.work@gmail.com> (http://github.com/adam-r-kowalski)",
+  "bugs": {
+    "url": "https://github.com/adam-r-kowalski/calc-memory-game/issues"
+  },
+  "homepage": "https://github.com/adam-r-kowalski/calc-memory-game",
+  "devDependencies": {
+    "jsx-loader": "^0.12.2",
+    "react-hot-loader": "^1.1.1",
+    "webpack": "^1.5.1",
+    "webpack-dev-server": "1.6.4"
+  },
+  "dependencies": {
+    "react": "^0.12.0"
+  }
+}
