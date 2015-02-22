@@ -8,13 +8,13 @@ var TeX = require("./tex");
 
 var styles = {
   div: {
-    border : "1px solid black",
-    width: "100%",
-    maxWidth: 800,
-    height: 100,
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center"
+    border         : "1px solid black",
+    width          : "100%",
+    maxWidth       : 800,
+    height         : 100,
+    display        : "flex",
+    justifyContent : "center",
+    alignItems     : "center"
   },
   tex: {
     fontSize: 32
@@ -26,10 +26,10 @@ var timeToDisplay = 5;
 var FlashCard = React.createClass({
   getInitialState: function() {
     return {
-      first : this.props.first,
-      last  : this.props.last,
-      text  : this.props.first,
-      seconds: timeToDisplay
+      first   : this.props.first,
+      last    : this.props.last,
+      text    : this.props.first,
+      seconds : timeToDisplay
     };
   },
   tick: function() {
@@ -56,7 +56,7 @@ var FlashCard = React.createClass({
   render: function() {
     return (
       <div
-        style = {styles.div}
+        style   = {styles.div}
         onClick = {this.onClick} >
         <TeX style = {styles.tex} >
           {this.state.text}
