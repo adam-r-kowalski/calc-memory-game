@@ -14,6 +14,13 @@ var styles = {
     margin   : "0 auto",
     border   : "1px solid black"
   },
+  tabsWebkit: {
+    display  : "-webkit-flex",
+    width    : "100%",
+    maxWidth : 800,
+    margin   : "0 auto",
+    border   : "1px solid black"
+  },
   tab: {
     padding    : 15,
     width      : "100%",
@@ -36,9 +43,13 @@ var styles = {
 
 var App = React.createClass({
   getInitialState: function() {
+    var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+    var tabsStyle = isChrome ? styles.tabs : styles.tabsWebkit;
+
     return {
       activeTab: "Basic",
-      formulas: <Basic />
+      formulas: <Basic />,
+      tabsStyle: tabsStyle
     };
   },
   basicTab: function() {
@@ -61,8 +72,8 @@ var App = React.createClass({
   },
   render: function() {
     return (
-      <div>
-        <div style={styles.tabs}>
+      <div style={{overflowX: "hidden"}}>
+        <div style={this.state.tabsStyle}>
           <div
             style={(this.state.activeTab === "Basic") ?
               styles.activeTab :

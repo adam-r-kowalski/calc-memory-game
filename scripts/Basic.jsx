@@ -11,13 +11,26 @@ var styles = {
     display       : "flex",
     flexDirection : "column",
     alignItems    : "center"
+  },
+  divWebkit: {
+    display             : "-webkit-flex",
+    WebkitFlexDirection : "column",
+    WebkitAlignItems    : "center"
   }
 };
 
 var Basic = React.createClass({
+  getInitialState: function() {
+    var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+    var divStyle = isChrome ? styles.div : styles.divWebkit;
+
+    return {
+      divStyle: divStyle
+    };
+  },
   render: function() {
     return (
-      <div style={styles.div}>
+      <div style={this.state.divStyle}>
         <FlashCard
           first = "\frac {d}{dx} (k)"
           last  = "0" />
