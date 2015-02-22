@@ -1,5 +1,5 @@
-// Author: Adam Kowalski
-// File: webpack.config.js
+// Author : Adam Kowalski
+// File   : webpack.config.js
 
 var webpack = require('webpack');
 

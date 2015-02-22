@@ -1,5 +1,5 @@
-// Author: Adam Kowalski
-// File: server.js
+// Author : Adam Kowalski
+// File   : server.js
 
 var webpack = require('webpack');
 var WebpackDevServer = require('webpack-dev-server');
